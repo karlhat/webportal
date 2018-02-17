@@ -5,4 +5,4 @@ COPY index.html /var/www/html/
 ADD  start_httpd.sh /start_httpd.sh
 RUN chmod -v +x start_httpd.sh
 EXPOSE 80
-CMD ["/start.sh"]
+CMD ["/start_httpd.sh"]
