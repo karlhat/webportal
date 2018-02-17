@@ -1,3 +1,4 @@
+#Run httpd
 FROM oraclelinux:7-slim
 RUN yum-config-manager --enable ol7_x86_64_latest
 RUN yum install -y httpd  && yum clean all
