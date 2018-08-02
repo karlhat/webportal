@@ -1,8 +1,6 @@
 #Run httpd
 FROM oraclelinux:7-slim
-RUN export http_proxy=http://www-proxy.us.oracle.com:80/
 RUN echo "nameserver 192.168.122.1 " >> /etc/resolv.conf
-RUN echo "proxy=http://www-proxy.us.oracle.com:80 " >> /etc/yum.conf
 RUN yum-config-manager --enable ol7_x86_64_latest
 RUN yum install -y httpd  && yum clean all 
 COPY index.html /var/www/html/
